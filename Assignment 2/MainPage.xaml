@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment_2.MainPage">
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*, *" RowDefinitions="Auto, Auto, *, Auto" Padding="20" RowSpacing="10" ColumnSpacing="20">
+            <Label Text="Grocery List" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="30" HorizontalTextAlignment="Center"/>
+            <Label Text="List of Snacks" Grid.Row="1" Grid.Column="0" FontSize="20"/>
+            <Label Text="Prices" Grid.Row="1" Grid.Column="1" FontSize="20"/>
+            
+                <CollectionView x:Name="snacksList" Grid.Row="2" Grid.Column="0">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding .}"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <CollectionView x:Name="priceList" Grid.Column="1" Grid.Row="2">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding .}"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            
+            <VerticalStackLayout Padding="30" Spacing="20" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center">
+                <Button Text="Press for Total" Clicked="TestButtonClicked" HorizontalOptions="Center"/>
+                <Label x:Name="totalLabel" Text=" " HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
