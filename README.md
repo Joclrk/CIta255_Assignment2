@@ -16,4 +16,4 @@ None
 
 ## AI assistance
 
-None but did get minor trouble shooting help from other students/friends.
+None but did get minor trouble shooting help from other students/friends. Credits to Anthony Sloat for the help!
